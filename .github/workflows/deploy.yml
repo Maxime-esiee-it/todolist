@@ -1,4 +1,4 @@
-name: Déploiement vers Vercel après exécution des tests
+: Déploiement vers Vercel après exécution des tests
 
 # Condition de déclenchement
 on:
@@ -61,4 +61,4 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npm install -g vercel
-          vercel --prod --token $VERCEL_TOKEN --yes
+          vercel --prod --token $VERCEL_TOKEN -
