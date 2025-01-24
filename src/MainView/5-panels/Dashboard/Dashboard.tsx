@@ -3,7 +3,6 @@ import { Box, CssBaseline } from "@mui/material";
 import AppBar from "../../4-templates/AppBar/AppBar";
 import LeftMenu from "../../4-templates/LeftMenu";
 import DashboardContent from "../../4-templates/DashboardContent";
-
 //********** Component **********//
 export const Dashboard = () => {
   const [open, setOpen] = useState(true);
