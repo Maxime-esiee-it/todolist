@@ -4,7 +4,6 @@ name: Vérification d'une pull-request²²
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-jobs:
 
 # A compléter
 
@@ -55,3 +54,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonarqube-scanner
+
+        sonar_scan:
+          name: SonarQube Anakysis
+          runs-on: unbutu-latest
+          needs: unit_tests #proprieter needs
+          steps:
+             - name: Checkout code
+               uses: actions/checkout@v4
