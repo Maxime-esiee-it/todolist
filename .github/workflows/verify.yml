@@ -4,7 +4,6 @@ name: Vérification d'une pull-request²²
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-jobs:
 
 # A compléter
 
