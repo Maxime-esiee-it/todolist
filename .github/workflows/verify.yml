@@ -48,17 +48,9 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-
+          needs: unit_tests
       - name: Run SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npx sonarqube-scanner
-
-        sonar_scan:
-          name: SonarQube Anakysis
-          runs-on: unbutu-latest
-          needs: unit_tests #proprieter needs
-          steps:
-             - name: Checkout code
-               uses: actions/checkout@v4
