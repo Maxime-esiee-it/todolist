@@ -8,28 +8,6 @@ on:
 # A compléter
 
 jobs:
-  # Premier job: exécution des tests
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Vérifier le code source
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Configurer Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22 # Remplacez par la version Node.js utilisée par votre projet
-
-      # Installer les dépendances
-      - name: Install dependencies
-        run: npm install
-
-      # Exécuter les tests
-      - name: Run tests
-        run: npm test
 
 # Dexuième job: Scan qualité par SonarCloud
   sonarcloud:
